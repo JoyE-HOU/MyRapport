@@ -6,6 +6,10 @@ public class Contact {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Contact andrew = new Contact();
+		andrew.setFirstName("Andrija");
+		andrew.setLastName("Jovanovic");
+		andrew.printContact();
 
 	}
 
@@ -22,8 +26,14 @@ public class Contact {
 		this.firstName = firstName;
 	}
 	
-	public void setLastNAme(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	
+	public void printContact() {
+		System.out.println("Congrats you created the following contact:");
+		System.out.println("Fist Name: " + firstName);
+		System.out.println("Last Name: " + lastName);
 	}
 	
 }
