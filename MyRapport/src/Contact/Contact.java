@@ -1,14 +1,22 @@
 package Contact;
+import java.util.Scanner;
 
 public class Contact {
 	private String firstName;
 	private String lastName;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner userRes = new Scanner(System.in); //Create a Scanner object
+		
+		System.out.println("Enter first name");
+		String addFirstName = userRes.nextLine();
+		
+		System.out.println("Enter last name");
+		String addLastName = userRes.nextLine();
+		
 		Contact andrew = new Contact();
-		andrew.setFirstName("Andrija");
-		andrew.setLastName("Jovanovic");
+		andrew.setFirstName(addFirstName);
+		andrew.setLastName(addLastName);
 		andrew.printContact();
 
 	}
@@ -22,12 +30,12 @@ public class Contact {
 	}
 
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstName(String addFirstName) {
+		this.firstName = addFirstName;
 	}
 	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastName(String addLastName) {
+		this.lastName = addLastName;
 	}
 	
 	public void printContact() {
